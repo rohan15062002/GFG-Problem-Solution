@@ -17,18 +17,9 @@ class Solution{
         //code here
         priority_queue<int>pq;
         int n = r-l+1;
-        int i = 0;
-        while(i < n)
-        {
+        for(int i=0;i<n;i++){
             pq.push(arr[i]);
-            i++;
-        }
-
-        i = 0;
-        while(i < n-k)
-        {
-            pq.pop();
-            i++;
+            if(pq.size()>k)pq.pop();
         }
         return pq.top();
     }
