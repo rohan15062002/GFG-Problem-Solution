@@ -8,15 +8,9 @@ class Solution {
   public:
     int solve(int a, int b) {
         // code here
-        int res=0;
-        while(a!=b){
-            if(a>b)swap(a,b);
-            b=a&b;
-            res++;
-        }
-        return res;
-        
-        
+         if(a == b) return 0;
+        if((a&b) == min(a,b)) return 1;
+        return 2;
     }
 };
 
